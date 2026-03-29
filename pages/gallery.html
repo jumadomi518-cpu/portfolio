@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+      box-sizing: border-box;
+    }
+  
+  main {
+    padding: 3em;
+  }
+  
+  section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border: 2px solid green;
+    gap: 10px;
+    margin: 2em;
+    user-select: none;
+  }
+  img {
+    height: 30vh;
+    width: 100%;
+    object-fit: contain;
+  }
+  </style>
+</head>
+
+<body>
+  <section id="images">
+  
+  </section>
+  <script>
+  document.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+  });
+    const images = document.getElementById("images");
+    const urls = {
+      one: "/assets/images/IMG_3135.JPG",
+      two: "/assets/images/IMG_2291.JPG",
+      three: "/assets/images/IMG_3139.JPG",
+      four: "/assets/images/IMG_3138.JPG",
+      five: "/assets/images/Untitled design (1).png",
+      six: "/assets/images/IMG_20250219_120013.jpg",
+      seven: "/assets/images/IMG_20250329_123714.jpg",
+      eight: "/assets/images/IMG_20251121_161515.jpg"
+    }
+    
+    for (const url in urls) {
+      const figure = document.createElement("figure");
+      const img = document.createElement("img");
+      img.src = urls[url];
+      figure.appendChild(img)
+      const figcaption = document.createElement("figcaption");
+      figure.appendChild(figcaption);
+      images.appendChild(figure);
+    };
+    
+  </script>
+</body>
+
+</html>

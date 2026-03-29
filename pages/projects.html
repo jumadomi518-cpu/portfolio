@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+        * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+    
+    header {
+      display: flex;
+      font-size: 1.5rem;
+      justify-content: space-between;
+      box-shadow: 0 0 5px 0 black;
+      padding: 0.5em;
+      margin: 2em 2em 0 2em;
+    }
+    body {
+      background-color: rgb(255, 250, 229);
+    }
+    
+        .hPar {
+      font-size: 1rem;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding: 0.5em;
+    }
+    main {
+      font-size: 1.5rem;
+      padding: 0 2em 0 2em;
+    }
+    
+
+        #profile {
+      height: 100px;
+      width: 100px;
+      border: 2px solid green;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    
+    section {
+      background-color: rgb(20, 50, 59);
+      color: white;
+      font-size: 1.2rem;
+      padding: 1.5em;
+      margin-bottom: 1em;
+    }
+    footer {
+      background-color: rgb(20, 50, 59);
+      color: white;
+      font-size: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+    footer ul {
+      padding: 0.5em;
+    margin: 3em;
+      display: grid;
+      width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+    }
+    hr {
+      width: 100%;
+    }
+    
+    li {
+      display: grid;
+      place-items: center;
+    }
+    footer p {
+      text-align: center;
+    }
+    
+    a {
+      color: rgb(200, 200, 59);
+      white-space: nowrap;
+      margin-top: 0.3em;
+    }
+    
+    footer a {
+      display: flex;
+      width: 50%;
+      text-decoration: none;
+    }
+    span {
+      margin-left: 0.3em;
+    }
+        .fa-arrow-right {
+      transform: rotate(-45deg);
+    }
+    p {
+      margin-top: 0.9em;
+      display: flex;
+      justify-content: space-between;
+    }
+    video {
+      width: 100%;
+      margin: 1em 0 1em 0;
+      height: 40vh;
+      object-fit: cover;
+    }
+
+  </style>
+      <link rel="stylesheet" href="../lib/fontawesome/css/all.css" />
+</head>
+
+<body>
+    <header>
+        <img src="/assets/images/IMG_20250723_085328.jpg" id="profile" />
+      <div class="hPar">
+    <h1>DOMINIC JUMA</h1>
+    <p>FULLSTACK DEVELOPER</p>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2>Mbiu emergency response system.</h2>
+      <div>
+        <figure>
+          <video src="/assets/videos/Screenrecorder-2026-03-28-18-27-57-339.mp4" controls muted></video>
+          <figcaption>MBIU is an emergency response system I am currently developing to provide fast, reliable assistance during critical situations. The platform is designed to connect users with nearby responders, enabling real-time alerts, location sharing, and rapid coordination when help is needed.</figcaption>
+        </figure>
+      </div>
+        <p><a href="https://mbiu.space">visit site  <i class="fas fa-arrow-right"></i></a> <a href="https://github.com/jumadomi518-cpu/Campus_Emergency_Server">view on github  <i class="fas fa-arrow-right"></i></a></p>
+    </section>
+    <section>
+      <h2>Free document storage and preview site.</h2>
+           <div>
+        <figure>
+          <video src="/assets/videos/Screenrecorder-2026-03-28-18-32-18-21.mp4" controls muted></video>
+          <figcaption> web app that offers additional document storage using IndexedDB, allowing users to upload and preview files directly on the browser. Built with a focus on simplicity and efficient client-side storage.</figcaption>
+        </figure>
+      </div>
+            <p><a href="">visit site  <i class="fas fa-arrow-right"></i></a> <a href="https://github.com/jumadomi518-cpu/domtech">view on github  <i class="fas fa-arrow-right"></i></a></p>
+    </section>
+    <section>
+      <h2>Difu service exchange market place.</h2>
+           <div>
+        <figure>
+          <video src="/assets/videos/Screenrecorder-2026-03-28-18-41-11-286.mp4" controls></video>
+          <figcaption>Difu is a marketplace platform I am currently building that connects users who want to offer or request services. The system is designed to make it easy for both people without technical skills and those with technical skills to get clients.</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+         <footer>
+  <p>quick links</p>
+    <hr>
+  <ul type="none" id="socialLinks">
+    <li><a href="tel:+254748543268"><i class="fas fa-phone" 
+   style="
+     background: #25d366;
+     color: white;
+     padding: 0.3em;
+     height: 2em;
+     width:  2em;
+     display: grid;
+     place-items: center;
+     font-size: 0.9rem;
+     border-radius: 50%;
+   ">
+</i> <span>call</span></a></li>
+    <li><a href="sms:+254748543268?body=Hello Dominic am interested in knowing more about your work."><i class="fas fa-comment-dots" 
+   style="
+     background: #007bff;
+     color: white;
+     padding: 0.3em;
+     height: 2em;
+     width: 2em;
+     display: grid;
+     place-items: center;
+     font-size: 0.9rem;
+     border-radius: 50%;
+   ">
+</i> <span>sms</span></a></li>
+    <li><a href="https://wa.me/+254768134809?text=Hello Dominic am interested in knowing more about your work"><i class="fab fa-whatsapp" 
+   style="
+     background: #25d366;
+     color: white;
+     padding: 0.3em;
+     height: 2em;
+     width: 2em;
+     display: grid;
+     place-items: center;
+     font-size: 0.9rem;
+     border-radius: 50%;
+   ">
+</i> <span> whatsapp</span></a></li>
+    <li><a href="mailto:jumadominic261@gmail.com?subject=Information about your work"><i class="fas fa-envelope" 
+   style="
+     background: #ea4335;
+     color: white;
+     padding: 0.3em;
+     height: 2em;
+     width: 2em;
+     display: grid;
+     place-items: center;
+     font-size: 0.9rem;
+     border-radius: 50%;
+   ">
+</i> <span>email</span></a></li>
+    <li><a href="https://www.facebook.com/dominic.juma.476694"><i class="fab fa-facebook-f" 
+   style="
+     background: #1877f2;
+     color: white;
+     padding: 0.3em;
+     height: 2em;
+     width: 2em;
+     display: grid;
+     place-items: center;
+     font-size: 0.9rem;
+     border-radius: 50%;
+   ">
+</i> <span>facebook</span></a></li>
+    <li><a href="https://www.x.com/DominicNyo73670"><i class="fab fa-x-twitter" 
+   style="
+     background: #000000;
+     color: white;
+     padding: 0.3em;
+     height: 2em;
+     width: 2em;
+     display: grid;
+     place-items: center;
+     font-size: 0.9rem;
+     border-radius: 50%;
+   ">
+</i><span>Corp</span></a></li>
+    <li><a href="https://www.instagram.com/dominicjumanyongesa"><i class="fab fa-instagram" 
+   style="
+     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+     color: white;
+     padding: 0.3em;
+     height: 2em;
+     width: 2em;
+     display: grid;
+     place-items: center;
+     font-size: 0.9rem;
+     border-radius: 50%;
+   ">
+</i> <span>Instagram</span></a></li>
+    <li><a href="https://www.linkedin.com/in/dominic-juma-56b8173ba" target="_blank"><i class="fab fa-linkedin-in" 
+   style="
+     background: #0a66c2;
+     color: white;
+     padding: 0.3em;
+     height: 2em;
+     width: 2em;
+     display: grid;
+     place-items: center;
+     font-size: 0.9rem;
+     border-radius: 50%;
+   ">
+</i>
+  <span>linkedin</span>
+</a></li>
+  </ul>
+  <hr>
+  <ul type="none">
+    <li><a href="/index.html">Home <i class="fas fa-arrow-right"></i></a></li>
+    <li><a href="../pages/about.html">About <i class="fas fa-arrow-right"></i></a></li>
+    <li><a href="../pages/experience.html">Experience <i class="fas fa-arrow-right"></i></a></li>
+    <li><a href="../pages/gallery.html">Gallery <i class="fas fa-arrow-right"></i></a></li>
+  </ul>
+  <p>&copy; 2026. Dominic Juma. All rights reserved.</p>
+</footer>
+</body>
+
+</html>

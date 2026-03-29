@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Dominic Juma | Full Stack Developer | Web & Mobile App Developer</title>
+  <meta name="description" content="Dominic Juma is a full stack developer building modern, scalable web and mobile applications. Explore projects, skills, and experience in frontend, backend, and cloud development.">
+  <meta name="keywords" content="Full Stack Developer, Web Developer, Mobile App Developer, JavaScript, HTML, CSS, Node.js, React, Backend Developer, Frontend Developer, Portfolio, Software Engineer, Kenya Developer">
+  <meta name="author" content="Dominic Juma">
+  <meta name="robots" content="index, follow">
+
+  
+  <meta property="og:title" content="Dominic Juma | Full Stack Developer">
+  <meta property="og:description" content="Portfolio of Dominic Juma showcasing full stack development projects, skills, and experience.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://domtech.com">
+  <meta property="og:image" content="https://domtech.com/assets/images/portfolioimage.jpg">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dominic Juma | Full Stack Developer">
+  <meta name="twitter:description" content="Explore full stack projects, apps, and development experience.">
+  <meta name="twitter:image" content="https://domtech.com/assets/images/portfolioimage.jpg">
+
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      box-sizing: border-box;
+    }
+    
+    html body {
+      overflow-x: hidden;
+    }
+    
+     body {
+      background-color: rgb(255, 250, 229);
+    }
+
+    header {
+      display: flex;
+      font-size: 1.5rem;
+      justify-content: space-between;
+      box-shadow: 0 0 5px 0 black;
+      padding: 0.5em;
+      margin: 2em 2em 0 2em;
+      transform: scale(0.1) rotate(180deg);
+      transition: all 2s;
+    }
+    main {
+      font-size: 1.5rem;
+      margin: 0 2em 0 2em;
+      box-shadow: 0 0 3px 0 black;
+    }
+    section {
+      padding: 1.5em;
+      transform: scale(0.2) rotate(180deg);
+opacity: 0;
+transition: all 2s;
+    }
+    
+    .imageTop {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .hPar {
+      font-size: 1rem;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding: 0.5em;
+    }
+    
+    #profile {
+      height: 100px;
+      width: 100px;
+      border: 2px solid green;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    
+    h1 {
+      font-size: inherit;
+    }
+    .menu {
+      border: none;
+      font-size: 1.5rem;
+      background-color: white;
+      padding: 0.7em;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .menu-items {
+      width: 0;
+      height: 0;
+      font-size: 1.5rem;
+      overflow: hidden;
+      box-shadow: 0 0 3px 0 black;
+      transition: all 0.5s ease;
+      font-family: "Verdana";
+      font-size: 1.2rem;
+      background-color: rgb(20, 50, 59);
+      color: whitesmoke;
+      display: flex;
+      justify-content: center;
+      border-bottom-left-radius: 0.5rem;
+      border-bottom-right-radius: 0.5rem;
+      background-image: url("/assets/images/Screenshot_2026-03-28-16-07-34-367_com.miui.home (1).jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    
+    .items {
+      display: grid;
+      margin: 3em;
+      font-size: 1rem;
+      gap: 2em;
+      padding: 2em;
+      grid-template-columns: repeat(3, 1fr)
+    }
+    
+    .toggleMenuItems {
+      width: 100%;
+      height: 65vh;
+      padding: 6em 0 0 0;
+    }
+    .items p {
+     margin-top: 0.9em;
+    }
+    
+    .items a {
+      color: white;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .intro {
+      font-size: 1.4rem;
+      z-index: -200;
+      position: relative;
+      box-shadow: 0 0 3px 0 black;
+      transform: scale(0.1) rotate(-180deg);
+      transition: all 2s;
+    }
+    .intro img {
+      height: 40vh;
+      margin-top: 0.5em;
+      object-fit: cover;
+      width: 100%;
+      box-shadow: 0 0 3px 0 black;
+    }
+    
+    h2 {
+      color: rgb(20, 50, 59);
+      margin-bottom: 0.5em;
+    }
+    h3 {
+      color: navajowhite;
+    }
+    #about, #skills, #projects, #gallery, #contacts, #experience {
+      background-color: rgb(20, 50, 59);
+      color: white;
+      font-size: 1.2rem;
+      padding: 1.5em;
+      margin-bottom: 1em;
+      border-radius: 0.5rem;
+    }
+    
+    #about p:last-child {
+      margin-top: 1em;
+    }
+    #languages li {
+      margin-left: 0.5em;
+    }
+    .langPar {
+      display: flex;
+      justify-content: space-between;
+      margin: 0.5em 0 0.5em 0;
+    }
+    #gallery img {
+      height: 40vh;
+      object-fit: cover;
+      width: 100%;
+    }
+    #gallery p {
+      margin-top: 2em;
+    }
+    h3 {
+      margin-bottom: 1em;
+    }
+    
+    .info {
+      background-color: white;
+      color: black;
+      border-radius: 0.4em;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.5s ease;
+    }
+  
+    .expandInfo {
+      max-height: 20vh;
+      padding: 0.5em;
+    }
+    .htmlArr, .cssArr, .jsArr, .reactArr, .expressArr, .sqlArr, .rnArr {
+      transform: rotate(0deg);
+      transition: all 0.5s ease;
+    }
+    .rotate {
+      transform: rotate(180deg);
+    }
+    #projects img {
+      height: 30vh;
+      width: 100%;
+      object-fit: cover;
+    }
+    
+    a {
+      color: rgb(200, 200, 59);
+      white-space: nowrap;
+      overflow: scroll;
+      margin-top: 0.3em;
+    }
+    
+    
+    
+    .morePro {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 0.3em;
+    }
+    
+    h4 {
+      margin-bottom: 0.5em;
+    }
+    .cta {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 100;
+      box-shadow: 0 0 3px 0 black;
+    }
+   .cta p {
+      padding: 0.4em;
+      font-size: 1.5rem;
+      width: 100%;
+      white-space: nowrap;
+      background-color: rgb(200, 200, 59);
+      color: rgb(20, 50, 59);
+      margin-bottom: 0.5em;
+      overflow: scroll;
+      border-radius: 0.5em;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .fa-arrow-right {
+      transform: rotate(-45deg);
+    }
+
+    
+    .swiper {
+  width: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+#call, #view {
+  width: 100%;
+}
+
+footer {
+      background-color: rgb(20, 50, 59);
+      color: white;
+      font-size: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+    footer ul {
+      padding: 0.5em;
+    margin: 3em;
+      display: grid;
+      width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+    }
+    hr {
+      width: 100%;
+    }
+    
+   footer li {
+      display: grid;
+      place-items: center;
+    }
+    footer p {
+      text-align: center;
+    }
+    
+    a {
+      color: rgb(200, 200, 59);
+      white-space: nowrap;
+      margin-top: 0.3em;
+    }
+    
+    footer a {
+      display: flex;
+      width: 50%;
+      text-decoration: none;
+    }
+    span {
+      margin-left: 0.3em;
+    }
+    .scale {
+  transform: scale(1) rotate(0deg);
+  opacity: 1;
+}
+  </style>
+   <link rel="canonical" href="https://domtech.com">
+
+  
+  <link rel="icon" href="favicon-96x96.png" type="image/x-icon">
+
+
+  <meta name="theme-color" content="#0f172a">
+  <link rel="stylesheet" href="../lib/fontawesome/css/all.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Dominic Juma",
+  "jobTitle": "Full Stack Developer",
+  "url": "https://domtech.com",
+  "sameAs": [
+    "https://github.com/jumadomi518-cpu",
+    "https://www.linkedin.com/in/dominic-juma-56b8173ba"
+  ],
+  "knowsAbout": [
+    "Web Development",
+    "JavaScript",
+    "Frontend Development",
+    "Backend Development",
+    "Mobile App Development"
+  ]
+}
+</script>
+</head>
+
+<body>
+  <header>
+        <img src="/assets/images/IMG_20250723_085328.jpg" id="profile" />
+      <div class="hPar">
+    <h1>DOMINIC JUMA</h1>
+    <p>FULLSTACK DEVELOPER</p>
+      </div>
+    </div>
+    <button class="menu">&#9776;</button>
+  </header>
+  <main>
+         <div class="menu-items">
+           <div class="items">
+      <p><a href="./pages/about.html"><i class="fas fa-id-badge" style="
+  background: linear-gradient(135deg, #36d1dc, #5b86e5);
+  color: white;
+  width: 60px;
+  height: 60px;
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+  border-radius: 18px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+"></i>about</a></p>
+      <p><a href="./pages/skills.html"><i class="fas fa-brain" style="
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  width: 60px;
+  height: 60px;
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+  border-radius: 18px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+"></i>skills </a></p>
+      <p><a href="./pages/projects.html"><i class="fas fa-briefcase" style="
+  background: linear-gradient(135deg, #141e30, #243b55);
+  color: white;
+  width: 60px;
+  height: 60px;
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+  border-radius: 18px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+"></i>projects</i></a></p>
+      <p><a href="./pages/experience.html"><i class="fas fa-history" style="
+  background: linear-gradient(135deg, #3a7bd5, #3a6073);
+  color: white;
+  width: 60px;
+  height: 60px;
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+  border-radius: 18px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+"></i>experience</i></a></p>
+      <p><a href="./pages/gallery.html"><i class="fas fa-images" style="
+  background: linear-gradient(135deg, #ff5f6d, #ffc371);
+  color: white;
+  width: 60px;
+  height: 60px;
+  display: grid;
+  place-items: center;
+  font-size: 1.4rem;
+  border-radius: 18px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+"></i>gallery </a></p>
+      <p><a href="./pages/contacts.html"><i class="fas fa-address-book" style="
+  background: linear-gradient(135deg, #4285f4, #34a853);
+  color: white;
+  width: 60px;
+  height: 60px;
+  display: grid;
+  place-items: center;
+  font-size: 1.4rem;
+  border-radius: 18px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+"></i>contacts </a></p>
+    <p><a href="./pages/quick.html"><i class="fas fa-link" style="
+  background: linear-gradient(135deg, #f7971e, #ffd200);
+  color: white;
+  width: 60px;
+  height: 60px;
+  display: grid;
+  place-items: center;
+  font-size: 1.4rem;
+  border-radius: 18px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+"></i>quick links</a></p>
+       <p><a href="tel:+254748543268"><i class="fas fa-phone-alt" style="
+  background: linear-gradient(135deg, #00c853, #64dd17);
+  color: white;
+  width: 60px;
+  height: 60px;
+  display: grid;
+  place-items: center;
+  font-size: 1.3rem;
+  border-radius: 18px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+"></i>phone</a></p>
+           </div>
+    </div>
+    <section class="intro">
+ <h2>Soft-spoken ideas with a powerful impact.</h2>
+ <img src="/assets/images/IMG_2291.JPG" />
+<p>Creating websites and mobile apps that bring visions to life.</p>
+ </section>
+  <section class="cta">
+   <a href="tel:+254748543268" id="call"><p><span>call</span><i class="fas fa-phone"></i></p></a>
+   <a href="./pages/projects.html" id="view"> <p><span>view projects</span><i class="fas fa-arrow-right"></i></p></a>
+   
+ </section>
+ <section id="about">
+   <h3>About</h3>
+   <p>
+I’m a full stack developer passionate about building modern, scalable web and mobile applications. I turn ideas into functional, user-friendly digital experiences by combining clean design with efficient backend systems. From concept to deployment, I focus on creating solutions that are not only visually appealing but also reliable and performance-driven... <a href="./pages/about.html">Read more <i class="fas fa-arrow-right"></i></a>
+</p>
+ </section>
+ 
+  <section id="skills">
+  <h3>Skills</h3>
+  <ul id="languages" type="none">
+    <li class="html">
+      <div class="langPar">
+      <strong><i class="fab fa-html5" style="color: #e34c26; font-size: 28px;"></i> HTML</strong>
+      <p class="htmlArr">▲</p>
+      </div>
+      <div class="info one">
+   <p>
+I use HTML to create clean, semantic, and well-structured web pages. 
+It allows me to organize content effectively and ensures accessibility, SEO friendliness, 
+and a solid foundation for styling with CSS and functionality with JavaScript.
+</p>
+      </div>
+    </li>
+    <li class="css">
+      <div class="langPar">
+      <strong><i class="fab fa-css3-alt" style="color: #264de4; font-size: 28px;"></i> CSS</strong>
+            <p class="cssArr">▲</p>
+      </div>
+      <div class="info two">
+        <p>
+I use CSS to design responsive, visually appealing user interfaces. 
+By applying modern techniques like Flexbox, Grid, and animations, 
+I ensure layouts are clean, consistent, and optimized for different devices and screen sizes.
+</p>
+      </div>
+    </li>
+    <li class="js">
+      <div class="langPar">
+      <strong> <i class="fab fa-js" style="color: #f7df1e;"></i> JavaScript</strong>
+            <p class="jsArr">▲</p>
+      </div>
+          <div class="info three">
+        <p>
+I use JavaScript to build dynamic, interactive web applications. 
+From handling user events to working with APIs and asynchronous operations, 
+I create smooth, responsive experiences that enhance usability and performance.
+</p>
+      </div>
+    </li>
+
+    <li class="react">
+      <div class="langPar">
+      <strong><i class="fab fa-react" style="color: #61dafb;"></i> React</strong>
+            <p class="reactArr">▲</p>
+      </div>
+          <div class="info four">
+        <p>
+I use React to build dynamic, interactive user interfaces with reusable components. 
+It enables efficient state management, scalable applications, and high-performance web experiences.
+</p>
+      </div>
+    </li>
+
+    <li class="sql">
+      <div class="langPar">
+      <strong><i class="fas fa-database" style="color: #4db33d;"></i> SQL</strong>
+            <p class="sqlArr">▲</p>
+            
+      </div>
+          <div class="info five">
+        <p>
+I use SQL to design, query, and manage relational databases efficiently. 
+It allows me to organize, retrieve, and manipulate data securely, ensuring that applications run smoothly and data-driven decisions are accurate.
+</p>
+      </div>
+    </li>
+    <li class="express">
+      <div class="langPar">
+      <strong><i class="fab fa-node-js" style="color: #3c873a; font-size: 28px;"></i> Express</strong>
+            <p class="expressArr">▲</p>
+      </div>
+          <div class="info six">
+        <p>
+I use Express to build robust and scalable backend applications. 
+It simplifies routing, middleware management, and server-side logic, enabling efficient communication between databases and front-end interfaces.
+</p>
+      </div>
+    </li>
+
+    <li class="rn">
+      <div class="langPar">
+      <strong><i class="fab fa-react" style="color: #61dafb;"></i> React Native</strong>
+            <p class="rnArr">▲</p>
+      </div>
+          <div class="info seven">
+        <p>
+I use React Native to develop cross-platform mobile applications with a single codebase. 
+It allows me to create responsive, high-performance apps for both iOS and Android while reusing components and maintaining consistent user experiences.
+</p>
+      </div>
+    </li>
+  </ul>
+</section>
+
+
+
+<section id="projects">
+  <h3>Projects</h3>
+  <h4>mbiu emergency response system</h4>
+  <figure>
+  <div class="swiper">
+  <div class="swiper-wrapper">
+    
+    <div class="swiper-slide"><img src="/assets/images/Screenshot_2026-03-27-18-59-03-654_com.android.chrome.jpg"></div>
+    <div class="swiper-slide"><img src="/assets/images/Screenshot_2026-03-27-18-58-37-387_com.android.chrome.jpg"></div>
+    <div class="swiper-slide"><img src="/assets/images/Screenshot_2026-03-27-18-59-28-820_com.android.chrome.jpg"></div>
+       <div class="swiper-slide"><img src="/assets/images/Screenshot_2026-03-27-18-59-36-311_com.android.chrome.jpg"></div>
+    <div class="swiper-slide"><img src="/assets/images/Screenshot_2026-03-27-19-00-00-440_com.android.chrome.jpg"></div>
+    <div class="swiper-slide"><img src="/assets/images/Screenshot_2026-03-27-19-00-43-487_com.android.chrome.jpg"></div>
+  </div>
+
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+</div>
+  <figcaption>Real time emergency alert system that connects victims and emergency responders in real time during emergencies with GPS and analytics measures.</figcaption>
+  </figure>
+ <p><a href="https://mbiu.space">visit site <i class="fas fa-arrow-right"></i></a></p>
+ <p class="morePro"><a href="./pages/gallery.html">view more projects <i class="fas fa-arrow-right"></i></a></p>
+</section>
+<section id="experience">
+  <h3>Experience</h3>
+  <p style="color: rgb(200, 200, 59); margin-bottom: 0.3em;"> 2025 - present (FULLSTACK Developer & Founder — DomTech).</p>
+<p>I began my journey in web development in 2025, focusing on building practical, user-centered digital solutions. As the founder of DomTech, I am currently leading the development of two key platforms aimed at solving real-world problems...  <a href="./pages/experience.html">Read more <i class="fas fa-arrow-right"></i></a></p>
+  
+</section>
+<section id="gallery">
+  <h3>Gallery</h3>
+  <figure>
+    <img src="./assets/images/IMG_3135.JPG"  />
+    <figcaption>Receiving a certificate in research and innovation conference Busia alupe university.</figcaption>
+  </figure>
+  <p><a href="./pages/gallery.html">see more <i class="fas fa-arrow-right"></i></a></p>
+</section>
+<section id="contacts">
+  <h3>Contacts</h3>
+  <p>Tel: +254748543268</p>
+  <p>Email: jumadominic261@gmail.com</p>
+</section>
+
+  </main>
+       <footer>
+  <p>quick links</p>
+    <hr>
+  <ul type="none">
+    <li><a href="tel:+254748543268"><i class="fas fa-phone" 
+   style="
+     background: #25d366;
+     color: white;
+     padding: 0.3em;
+     height: 2em;
+     width:  2em;
+     display: grid;
+     place-items: center;
+     font-size: 0.9rem;
+     border-radius: 50%;
+   ">
+</i> <span>call</span></a></li>
+    <li><a href="sms:+254748543268?body=Hello Dominic am interested in knowing more about your work."><i class="fas fa-comment-dots" 
+   style="
+     background: #007bff;
+     color: white;
+     padding: 0.3em;
+     height: 2em;
+     width: 2em;
+     display: grid;
+     place-items: center;
+     font-size: 0.9rem;
+     border-radius: 50%;
+   ">
+</i> <span>sms</span></a></li>
+    <li><a href="https://wa.me/+254768134809?text=Hello Dominic am interested in knowing more about your work"><i class="fab fa-whatsapp" 
+   style="
+     background: #25d366;
+     color: white;
+     padding: 0.3em;
+     height: 2em;
+     width: 2em;
+     display: grid;
+     place-items: center;
+     font-size: 0.9rem;
+     border-radius: 50%;
+   ">
+</i> <span> whatsapp</span></a></li>
+    <li><a href="mailto:jumadominic261@gmail.com?subject=Information about your work"><i class="fas fa-envelope" 
+   style="
+     background: #ea4335;
+     color: white;
+     padding: 0.3em;
+     height: 2em;
+     width: 2em;
+     display: grid;
+     place-items: center;
+     font-size: 0.9rem;
+     border-radius: 50%;
+   ">
+</i> <span>email</span></a></li>
+    <li><a href="https://www.facebook.com/dominic.juma.476694"><i class="fab fa-facebook-f" 
+   style="
+     background: #1877f2;
+     color: white;
+     padding: 0.3em;
+     height: 2em;
+     width: 2em;
+     display: grid;
+     place-items: center;
+     font-size: 0.9rem;
+     border-radius: 50%;
+   ">
+</i> <span>facebook</span></a></li>
+    <li><a href="https://www.x.com/DominicNyo73670"><i class="fab fa-x-twitter" 
+   style="
+     background: #000000;
+     color: white;
+     padding: 0.3em;
+     height: 2em;
+     width: 2em;
+     display: grid;
+     place-items: center;
+     font-size: 0.9rem;
+     border-radius: 50%;
+   ">
+</i><span>Corp</span></a></li>
+    <li><a href="https://www.instagram.com/dominicjumanyongesa"><i class="fab fa-instagram" 
+   style="
+     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+     color: white;
+     padding: 0.3em;
+     height: 2em;
+     width: 2em;
+     display: grid;
+     place-items: center;
+     font-size: 0.9rem;
+     border-radius: 50%;
+   ">
+</i> <span>Instagram</span></a></li>
+    <li><a href="https://www.linkedin.com/in/dominic-juma-56b8173ba" target="_blank"><i class="fab fa-linkedin-in" 
+   style="
+     background: #0a66c2;
+     color: white;
+     padding: 0.3em;
+     height: 2em;
+     width: 2em;
+     display: grid;
+     place-items: center;
+     font-size: 0.9rem;
+     border-radius: 50%;
+   ">
+</i>
+  <span>linkedin</span>
+</a></li>
+  </ul>
+  <hr>
+  <ul type="none">
+    <li><a href="./pages/about.html">About <i class="fas fa-arrow-right"></i></a></li>
+    <li><a href="./pages/projects.html">Projects <i class="fas fa-arrow-right"></i></a></li>
+    <li><a href="./pages/experience.html">Experience <i class="fas fa-arrow-right"></i></a></li>
+    <li><a href="./pages/gallery.html">Gallery <i class="fas fa-arrow-right"></i></a></li>
+  </ul>
+  <p>&copy; 2026. Dominic Juma. All rights reserved.</p>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script src="./js/index.js">
+  </script>
+</body>
+
+</html>
